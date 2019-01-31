@@ -6,6 +6,8 @@ import { bail } from './utility.helpers';
 
 export interface ExecuteResult {
   command: string;
+  stdout: string;
+  stderr: string;
   error?: any;
   code?: number;
   signal?: string;
@@ -26,7 +28,7 @@ function promisifyProcess(command: string, childProcessFn: () => ChildProcess, b
   return new Promise<ExecuteResult>(resolve => {
     console.log(`\n${chalk.gray(`> ${command}`)}`);
 
-    const result: ExecuteResult = { command };
+    const result: ExecuteResult = { command, stdout: '', stderr: '' };
 
     let done = false;
 
@@ -47,6 +49,18 @@ function promisifyProcess(command: string, childProcessFn: () => ChildProcess, b
     };
 
     const childProcess = childProcessFn();
+
+    if (childProcess.stdout) {
+      childProcess.stdout.on('data', data => {
+        result.stdout += data.toString();
+      });
+    }
+
+    if (childProcess.stderr) {
+      childProcess.stderr.on('data', data => {
+        result.stderr += data.toString();
+      });
+    }
 
     childProcess.on('error', error => {
       handleResult(error);

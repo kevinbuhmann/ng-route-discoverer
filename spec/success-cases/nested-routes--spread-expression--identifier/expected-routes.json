@@ -1,0 +1,13 @@
+[
+  {
+    "path": "errors",
+    "children": [
+      {
+        "path": "not-found"
+      },
+      {
+        "path": "internal-server-error"
+      }
+    ]
+  }
+]

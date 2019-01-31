@@ -1,0 +1,8 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist-spec/test-project"
+  },
+  "include": ["**/*.ts"]
+}
