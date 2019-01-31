@@ -1,0 +1,41 @@
+{
+  "name": "ng-route-discoverer",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "ng-route-discoverer": "./dist/ng-route-discoverer-cli.js"
+  },
+  "repository": "https://github.com/kevinphelps/ng-route-discoverer.git",
+  "author": "Kevin Phelps <KevinPhelps11@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "ts-node ./build/lint.ts",
+    "build": "ts-node ./build/build.ts",
+    "test": "ts-node ./build/test.ts",
+    "print-coverage": "istanbul report -t text",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "prepublishOnly": "yarn run build"
+  },
+  "dependencies": {
+    "chalk": "2.4.2",
+    "yargs": "12.0.5"
+  },
+  "devDependencies": {
+    "@types/jasmine": "3.3.8",
+    "@types/node": "10.12.20",
+    "@types/rimraf": "2.0.2",
+    "@types/yargs": "12.0.8",
+    "codecov": "3.1.0",
+    "istanbul": "0.4.5",
+    "jasmine": "3.3.1",
+    "ncp": "2.0.0",
+    "prettier": "1.16.2",
+    "remap-istanbul": "0.13.0",
+    "rimraf": "2.6.3",
+    "ts-node": "8.0.2",
+    "tslint": "5.12.1",
+    "tslint-consistent-codestyle": "1.15.0",
+    "typescript": "3.2.4"
+  }
+}
