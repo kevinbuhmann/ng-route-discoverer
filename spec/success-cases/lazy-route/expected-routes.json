@@ -1,0 +1,18 @@
+[
+  {
+    "path": "feature",
+    "children": [
+      {
+        "path": "",
+        "children": [
+          {
+            "path": ""
+          },
+          {
+            "path": "feature-page"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "path": "app-shell"
+  },
+  {
+    "path": "",
+    "children": [
+      {
+        "path": ""
+      },
+      {
+        "path": "errors",
+        "children": [
+          {
+            "path": "not-found"
+          },
+          {
+            "path": "internal-server-error"
+          }
+        ]
+      },
+      {
+        "path": "**"
+      }
+    ]
+  }
+]
