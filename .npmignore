@@ -1,12 +1,19 @@
 .git/
-src/
 build/
 coverage/
+dist-spec/
+spec/
+src/
 
 .istanbul.yml
 .npmignore
+.prettierignore
 .travis.yml
 jasmine.json
+prettier.json
+tsconfig.json
 tsconfig.lint.json
+tsconfig.spec.json
+tslint.json
 tslint.spec.json
 yarn.lock
