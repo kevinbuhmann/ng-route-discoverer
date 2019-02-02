@@ -13,6 +13,8 @@ const options = parseFlags(process.argv.slice(2), defaultOptionsFn);
   if (options.prettier) {
     await runFormatter(`prettier --config ./prettier.json ./**/*.ts`, '--write', '--list-different', options.fix);
     await runFormatter(`prettier --config ./prettier.json ./**/*.json`, '--write', '--list-different', options.fix);
+    await runFormatter(`prettier --config ./prettier.json ./**/*.yml`, '--write', '--list-different', options.fix);
+    await runFormatter(`prettier --config ./prettier.json ./**/*.md`, '--write', '--list-different', options.fix);
   }
 
   if (options.tslint) {
