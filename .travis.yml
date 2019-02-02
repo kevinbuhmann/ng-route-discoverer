@@ -6,6 +6,6 @@ os:
   - linux
   - osx
 script:
-- yarn run build
+  - yarn run build
 after_success:
-- yarn run report-coverage
+  - yarn run report-coverage
